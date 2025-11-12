@@ -8,6 +8,7 @@ newMessageRouter.get("/", (req, res) => {
 
 newMessageRouter.post("/", (req, res) => {
     console.log("post request received");
+    res.send("Message Sent!")
 });
 
 export default newMessageRouter;
