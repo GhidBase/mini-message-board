@@ -28,4 +28,20 @@ router.get("/", (req, res) => {
     res.render("index", { message: "Welcome!", messages: messages });
 });
 
+router.get("/new", (req, res) => {
+    res.render("form");
+});
+
+router.post("/new", (req, res) => {
+    console.log("post request received");
+    console.log(req.body.messageName);
+    console.log(req.body.messageText);
+    messages.push({
+        text: req.body.messageText,
+        user: req.body.messageName,
+        added: new Date(),
+    });
+    res.redirect("/");
+});
+
 export default router;
