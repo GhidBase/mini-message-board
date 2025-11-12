@@ -13,9 +13,11 @@
                 <%- include('message',{
                     text: message.text,
                     user: message.user,
-                    added: message.added
+                    added: message.added,
+                    id: message.id,
                 }) %>
             <% }); %>
         </ul>
+        <a href="new">New message</a>
     </body>
 </html>
