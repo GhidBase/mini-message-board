@@ -1,6 +1,7 @@
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import router from "./routes/router.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const assetsPath = path.join(__dirname, "public");
@@ -10,9 +11,7 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-    res.render("index", { message: "Welcome!" });
-});
+app.use("/", router);
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
