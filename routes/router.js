@@ -7,28 +7,10 @@ const router = Router();
 // to the message/id route
 const messages = [
     {
-        text: "Hi there!",
-        user: "Amando",
+        text: "Welcome!",
+        user: "Dylan",
         added: new Date(),
         id: 0,
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date(),
-        id: 1,
-    },
-    {
-        text: "I <3 Omarchy!",
-        user: "Pewdiepie",
-        added: new Date(),
-        id: 2,
-    },
-    {
-        text: "DHH MUST BE STOPPED",
-        user: "Random Guy on the Internet",
-        added: new Date(),
-        id: 3,
     },
 ];
 
