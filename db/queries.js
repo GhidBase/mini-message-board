@@ -19,8 +19,9 @@ async function createPostsTable() {
 }
 
 async function insertNewPost(text, user, added) {
+
     await pool.query(
-        `INSERT INTO posts (username, text, added) VALUES ($1, $2, $3);`,
+        `INSERT INTO posts (text, username, added) VALUES ($1, $2, $3);`,
         [text, user, added]
     );
 }

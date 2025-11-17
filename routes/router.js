@@ -44,13 +44,13 @@ router.post("/new", async (req, res) => {
 
 router.get("/message/:messageId", (req, res) => {
     const id = req.params.messageId;
-    console.log(id);
-    console.log(messages[id]);
+    const index = messages.findIndex((message) => message.id == id);
+
     res.render("details", {
-        user: messages[id].user,
-        text: messages[id].text,
-        added: messages[id].added,
-        id: messages[id].id,
+        user: messages[index].username,
+        text: messages[index].text,
+        added: messages[index].added,
+        id: messages[index].id,
     });
     // res.redirect("/");
 });
