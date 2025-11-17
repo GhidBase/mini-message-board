@@ -1,1 +1,6 @@
-First set up routing
+Switching this to real database hosting
+
+This is a command Neon gave me to initiate a connection
+npx neonctl@latest init
+
+It requires cursor. I guess I can't use that then

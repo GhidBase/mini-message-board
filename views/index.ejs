@@ -12,7 +12,7 @@
             <% messages.forEach((message) => { %>
                 <%- include('message',{
                     text: message.text,
-                    user: message.user,
+                    user: message.username,
                     added: message.added,
                     id: message.id,
                 }) %>
